@@ -33,7 +33,7 @@ def read_image_bgr(path):
     return image[:, :, ::-1]
 
 
-def preprocess_image(x, mode='caffe'):
+def preprocess_image(x, mode='custom'):
     """ Preprocess an image by subtracting the ImageNet mean.
 
     Args
@@ -57,6 +57,8 @@ def preprocess_image(x, mode='caffe'):
         x -= 1.
     elif mode == 'caffe':
         x -= [103.939, 116.779, 123.68]
+    elif mode == 'custom':
+        x /= 255
 
     return x
 
