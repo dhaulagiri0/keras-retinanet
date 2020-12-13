@@ -240,6 +240,8 @@ def create_generators(args, preprocess_image):
         transform_generator = random_transform_generator(
             min_rotation=-0.1,
             max_rotation=0.1,
+            min_translation=(-0.1, -0.1),
+            max_translation=(0.1, 0.1),
             min_shear=-0.1,
             max_shear=0.1,
         )
