@@ -33,7 +33,7 @@ def read_image_bgr(path):
     return image[:, :, ::-1]
 
 
-def preprocess_image(x, mode='custom'):
+def preprocess_image(x, mode='tf'):
     """ Preprocess an image by subtracting the ImageNet mean.
 
     Args
